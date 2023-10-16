@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    position: relative;
+    top:0;
+    width: 100%;
+    font-size: 15px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+header .nav a{
+     color: #000;
+     text-decoration: none;
+     font-weight: 500;
+     letter-spacing: 1px;
+     padding: 2px 15px;
+     border-radius: 20px;
+     transition: 0.3s;
+     transition-property: background;
+}
+header .nav a:not(:last-child){
+    margin-right: 30px;
+}
+.nav>a:hover{
+  color: #f45f5f;
+}
+header .nav a:hover{
+    background: #Fff;
+}
+.label{
+    display: none;
+}
+#check{
+    z-index: 3;
+    display: none;
+}
+
+/* ---------------------------- */
+/* respon */
+@media(max-width:960px){
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+      }
+    header .nav{
+        display: none;
+    }
+    .label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color: #fff;
+    }
+    label .fa-x{
+        display: none;
+    }
+    #check:checked ~ header .nav{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114,223,255,0.9);
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .nav a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    #check:checked ~ header label .fa-bars{
+        display: none;
+    }
+    #check:checked ~ header label .fa-x{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .fa-bars{
+        position: absolute;
+    }
+    header .logo{
+        position: absolute;
+        bottom: -2px;
+    }
+    .nav li:hover>.sub-menu{
+        display: flex;
+    }
+    .nav li a{
+        margin-left: -10px;
+    }
+    .nav .sub-menu{
+        width: 300px;
+        height: 50px;
+        background: none;
+    }
+}
+@media(max-height:700px){
+    header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      /* border-radius: 0% 0% 75% 75% ; */
+    }
+  }
+  /* ---------------------------------- */
+.footer{
+    background-color: #1B1B1B;
+    background-size: cover;
+    padding: 3rem 7%;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #Fff;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #Fff;
+}
+.footer .box-container .box a{
+    text-decoration: none;
+}
+.footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links i{
+    color: #ffffff;
+    padding-right: 0.5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    color: #f45f5f;
+}
+.footer .box-container .box .email{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: none;
+}
+
+.footer .box-container .box .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    margin-right: .8rem;
+    text-align: center;
+    margin-top: 1.4rem;
+    transition: 1s;
+}
+
+.footer .box-container .box .share a:hover{
+    transform: scale(1.3);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+    color: #Fff;
+    border-top: .2rem solid #989797;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+/* ------------------------------------- */
+
+.container {
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 110px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #2215e0;
+}
+
+form {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container .form-group {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.container label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 20px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+select > option{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.radio-buttons label {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: auto;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #239523;
+}
+
+/* Modal styles */
+.order-modal {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #717070;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.order-summary {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.back-btn i {
+    margin-right: 5px;
+}
+
+.modal-buttons button {
+    align-self: flex-end;
+}
+
+.accept-btn {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.accept-btn:hover {
+    background-color: #005000;
+}
+
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-out;
+    transition: all 0.5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-show {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    overflow: auto;
+    display: block;
+    z-index: 10000;
+    visibility: visible;
+}
+.button-order>button>a>img{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 25% 0 25% 0;
+
+}
+.button-order>button{
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container, .modal-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER_DRINKS</title>
+	  <link rel="stylesheet" href="../css/oder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+  </head>
+  <body> 
+    <input type="checkbox" id="check">
+      <header>
+       
+          <h2><a href="#" class="logo"><img src="https://ld-wp73.template-help.com/wordpress/prod_3783/v2/wp-content/uploads/2022/12/logo.png" alt=""></a></h2>
+          <div class="nav">
+            <a href="../html/home.html">Home</a>
+            <a href="../html/menu.html">Menu</a>
+            <a href="../html/about.html">About</a>
+            <a href="../html/gallery.html">Gallery</a>
+            <a href="../html/blog.html">Blog</a>
+            <a href="../html/contact.html">Contact</a>
+              <a href="../html/login.html">Login/Sign up</a>
+          </div>  
+          <label class="label" for="check">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-x"></i>
+          </label>
+      </header>
+
+<!-- -------------------- -->
+<div class="container">
+    <h1>ORDER   <br>
+        <p class="button-order">
+       <button><a href="../html/CAKE.html"><img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></a></button>
+       <button><a href="../html/Drinks.html"><img src="https://beptruong.edu.vn/wp-content/uploads/2015/12/kem-dau-tay-tuoi-mat.jpg" alt=""></a></button>
+       <button><a href="../html/Cooking.html"><img src="https://static.wixstatic.com/media/d253bb_2009555b268f403fbe2b8f45d735ec3e~mv2.jpg/v1/fill/w_666,h_444,al_c,lg_1,q_80,enc_auto/d253bb_2009555b268f403fbe2b8f45d735ec3e~mv2.jpg" alt=""></a></button>
+       <button><a href="../html/H&P.html"><img src="https://lh6.googleusercontent.com/L3CPXUvkJ1HC8Gi8SYvvM6mT864KTwIfaC3nGlzfgUTIKcFUHigETUE--utWu-JAH0SuttQ1yC5lthXL5PdGFMPrP8YrTBRv_zgwIx4-89gb-7e2uS1RsNkYqufalwYgnW_uV3HLvgNsqjErAbp44jYbHWTbSls11V6ErEVTf5Y0bwxVT0VpeCm8LbOaGQ" alt=""></a></button>
+   </p></h1>
+    <form id="order-form" method="post" action="">
+        <div class="form-group">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="product">Sản phẩm:</label>
+            <select id="product" name="product" required>
+                <option value="">--Vui lòng chọn một lựa chọn--</option>
+                <option value="Mixed ice cream">Mixed ice cream</option>
+                <option value="Strawberry ice-cream">Strawberry ice-cream</option>
+                <option value="vanilla ice cream">vanilla ice cream</option>
+                <option value="Passion fruit juice">Passion fruit juice</option>
+                <option value="Orange juice">Orange juice</option>
+                <option value="Guava juice">Guava juice</option>
+                <option value="Mango juice">Mango juice</option>
+                <option value="Watermelon juice">Watermelon juice</option>
+                <option value="Kiwi juice">Kiwi juice</option>
+                <option value="Carrot juice">Carrot juice</option>
+                <option value="Latte Macchiato">Latte Macchiato</option>
+                <option value="Capuchino">Capuchino</option>
+                <option value="milk coffee">milk coffee</option>
+                <option value="Espresso">Espresso</option>
+                <option value="Mango juice">Mango juice</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ giao hàng:</label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="payment">Phương thức thanh toán:</label>
+            <div class="radio-buttons">
+                <input type="radio" id="credit-card" name="payment" value="Thẻ tín dụng" checked>
+                <label for="credit-card">Thẻ tín dụng</label>
+                <br>
+                <input type="radio" id="paypal" name="payment" value="Paypal">
+                <label for="paypal">Paypal</label>
+                <br>
+                <input type="radio" id="cash-on-delivery" name="payment" value="Thanh toán khi nhận hàng">
+                <label for="cash-on-delivery">Thanh toán khi nhận hàng</label>
+            </div>
+        </div>
+        <button type="submit" id="submit-button">Đặt Hàng</button>
+    </form>
+    <!-- Modal -->
+    <div id="order-modal" class="order-modal">
+        <div id="modal-content" class="modal-content">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <div id="order-summary" class="order-summary"></div>
+            <div class="modal-buttons">
+                <a href="#" id="back-btn" class="back-btn"><i class="fas fa-reply"></i> Quay lại</a>
+                <button id="accept-btn" class="accept-btn">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/oder.js"></script>
+<!-- ---------------------------------------------footer------------------------------------------------ -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3><i class="fas fa-envelope"></i>About Us</h3>
+            <p>Visit our restaurant to experience our relaxing atmosphere, to find a peace of mind and to enjoy our diverse, delicious, gourmet menu. Our extensive choice of side and main dishes and appetizers, as well as NA and alcoholic beverages are made to make your taste buds happy!</p>
+        </div>
+
+        <div class="box">
+            <h3>Contact Us</h3>
+            <a href="#" class="links"><i class="fas fa-phone"></i> 0866556871</a>
+            <a href="#" class="links"><i class="fas fa-envelope"></i> anhntv.22itb@vku.udn.vn</a>
+            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>226/Trần Đại Nghĩa/Ngũ Hành Sơn/Đà Nẵng</a>
+            <a href="#" class="links"><i class="fas fa-bars"></i> 7:00 - 23:00</a>
+        </div>
+        <div class="box">
+            <h3>Information</h3>
+            <p>You can fill in your information here</p>
+            <input type="email" placeholder="Your Email" class="email">
+            <input type="email" placeholder="Your Phone" class="email">
+
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</html>

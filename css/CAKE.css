@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    position: fixed;
+    background-color: #Fff;
+    top:0;
+    width: 100%;
+    font-size: 15px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    
+}
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+header .nav a{
+     color: #000;
+     text-decoration: none;
+     font-weight: 500;
+     letter-spacing: 1px;
+     padding: 2px 15px;
+     border-radius: 20px;
+     transition: 0.3s;
+     transition-property: background;
+}
+header .nav a:not(:last-child){
+    margin-right: 30px;
+}
+.nav>a:hover{
+  color: #f45f5f;
+}
+header .nav a:hover{
+    background: #Fff;
+}
+.label{
+    display: none;
+}
+#check{
+    z-index: 3;
+    display: none;
+}
+
+/* ----------------menu----------------------------- */
+.main{
+  width: 100%;
+  background: #ffffff;
+    margin-top: 150px;
+
+}
+.slider{
+  width: 100%;
+  height: 250px;
+  position: relative;
+  bottom: 120px;
+}
+.slider .slide img{
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+.slider .tile h1{
+  font-size: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+  justify-content: center;
+  font-family:  script;
+  color: rgb(244, 244, 247);
+}
+
+
+.menu
+{
+  width: 100%;
+  padding-top:70px  ;
+  margin-top: 50px  ;
+}
+.menu h1{
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+
+.menu .menu_box{
+  width: 95%;
+  display: grid;
+  padding-left: 90px;
+  grid-template-columns: 1fr 1fr  1fr  ;
+  gap: 1rem;
+  
+  
+}
+.menu .menu_box .menu_card{
+  width: 325px;
+  height: 420px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  
+}
+.menu .menu_box .menu_card .menu_image{
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.menu .menu_box .menu_card .menu_image img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+transition: 0.3s;
+border-radius: 4px;
+}
+.menu .menu_box .menu_card .menu_image:hover img{
+  transform: scale(1.2);
+}
+.menu .menu_box .menu_card .small_card{
+  width: 45px;
+  height: 45px;
+  float: right;
+  position: relative;
+  top: -240px;
+  right: -8px;
+  opacity: 0;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+.menu .menu_box .menu_card:hover .small_card{
+  position: relative;
+  top: -240px;
+  right: 20px;
+  opacity: 1;
+}
+.menu .menu_box .menu_card:hover .small_card i{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 0 6px rgb(70, 46, 46);
+  transition: 0.2s;
+}
+.menu .menu_box .menu_card:hover .small_card i{
+  color: rgb(238, 20, 20);
+}
+.menu .menu_box .menu_card .menu_info h2{
+  width: 80%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(71, 71, 70);
+  font-family: script;
+  position: relative;
+  left: 10%;
+}
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center;
+  padding-top: 8px;
+  align-items: center;
+  justify-items: center;
+  color: rgb(182, 11, 11);
+  
+}
+.menu .menu_box .menu_card .menu_info .menu_icon {
+  text-align: center;
+  color: rgb(255, 128, 0);
+  margin: 10px 0 20px 0;
+}
+.menu .menu_box .menu_card .menu_info .menu_icon i{
+  font-size: 15px;
+}
+.menu .menu_box .menu_card .menu_info .menu_tbn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 15px;
+  color: white;
+  background-color: #424141;
+  padding: 8px 10px;
+  transition: 0.2s all;
+  width: 50%;
+  position: relative;
+  left: 25%;
+  margin-bottom: 5px;
+  max-width: 100%;
+  
+  
+}
+.menu .menu_box .menu_card .menu_info a:hover{
+  color: #f45f5f;
+  
+  background-color: green;
+
+}
+.menu_tbn:hover{
+  background-color: green;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_tbn:hover{
+  background-color: green;
+
+}
+
+
+/* respon */
+
+@media(max-width:1000px){
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+  }
+    header .nav{
+        display: none;
+    }
+    .label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color: #fff;
+    }
+    label .fa-x{
+        display: none;
+    }
+    #check:checked ~ header .nav{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114,223,255,0.9);
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .nav a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    #check:checked ~ header label .fa-bars{
+        display: none;
+    }
+    #check:checked ~ header label .fa-x{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .fa-bars{
+        position: absolute;
+    }
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+    
+}
+@media screen and (max-width:1000px){
+  .menu .menu_box{
+    grid-template-columns: 1fr 1fr ;
+    
+  }
+  
+  .slider .tile h1{
+    left: 38%;
+  }
+}
+@media screen and (max-width:680px){
+
+  .menu .menu_box{
+    grid-template-columns: 1fr ;
+    padding-left:110px ;
+  }
+  .menu .menu_box .menu_card{
+    margin-left: -18px;
+  }
+  .slider .tile h1{
+    left: 28%;
+    font-size: 70px;
+    bottom: 5px;
+  }
+  
+}
+@media screen and (max-width:420px){
+  .menu .menu_box{
+    grid-template-columns: 1fr ;
+    padding-left:60px ;
+  }
+}
+@media screen and (max-width:960px){
+  header{
+    margin-bottom: 90px;
+  }
+}
+@media screen and (max-width:395px){
+  .menu .menu_box{
+    grid-template-columns: 1fr ;
+    padding-left:50px ;
+  }
+}
+@media screen and (max-width:285px){
+  .menu .menu_box{
+    grid-template-columns: 1fr ;
+    padding-left:25px ;
+  }
+}
+/* @media(max-height:700px){
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0% 0% 75% 75% ; */
+  
+/* -------------footer--------------------------*/
+.footer{
+  background-color: #1B1B1B;
+    background-size: cover;
+    padding: 3rem 7%;
+    
+  }
+  
+  .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #Fff;
+  }
+  
+  .footer .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #Fff;
+  }
+  .footer .box-container .box a{
+    text-decoration: none;
+  }
+  .footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 1rem 0;
+  }
+  
+  .footer .box-container .box .links i{
+    color: #ffffff;
+    padding-right: 0.5rem;
+  }
+  
+  .footer .box-container .box .links:hover i{
+    color: #f45f5f;
+  }
+  .footer .box-container .box .email{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: none;
+  }
+  
+  .footer .box-container .box .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    margin-right: .8rem;
+    text-align: center;
+    margin-top: 1.4rem;
+    transition: 1s;
+  }
+  
+  .footer .box-container .box .share a:hover{
+    transform: scale(1.3);
+  }
+  
+  .footer .credit{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+    color: #Fff;
+    border-top: .2rem solid #989797;
+  }
+
